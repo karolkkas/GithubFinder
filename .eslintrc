@@ -28,6 +28,7 @@
     "class-methods-use-this":1,
     "arrow-body-style":0,
     "semi-spacing": 0,
-    "no-useless-escape": 1
+    "no-useless-escape": 1,
+    "no-trailing-spaces": 1
   }
 }
