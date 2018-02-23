@@ -2,22 +2,35 @@ import React, { Component } from 'react';
 
 const ListItem = ({ title, handleDeleteFromList, profile }) => {
     const handleDelete = (e) => {
-        const itemName = e.currentTarget.parentElement.children[1].innerHTML;
+        const itemName = e.currentTarget;
         handleDeleteFromList(itemName);
+        console.dir(itemName)
     };
 
     return (
-        <li>
-            <img src={profile.avatar_url} alt={`${profile.login} logo`} />
-            <h4>{title}</h4>
-            <a
-              href={profile.html_url}
-              title="Visit GitHub profile"
-            >GitHub</a>
-            <button
-              type="button"
-              onClick={handleDelete}
-            >Delete</button>
+        <li className="card border-warning mb-3 p-3">
+            <div className="row d-flex align-items-center mx-0">
+                <div className="col-12 col-md-3 px-0">
+                    <img src={profile.avatar_url} 
+                    className="c-img"
+                    alt={`${profile.login} logo`} />
+                </div>
+                <div className="col-12 col-md-9 pr-md-0">
+                    <h4 className="p-2">{title}</h4>
+                    <div className="btns">
+                        <a
+                        href={profile.html_url}
+                        className="btn btn-warning"
+                        title="Visit GitHub profile"
+                        >GitHub</a>
+                        <button
+                        type="button"
+                        className="btn btn-danger"
+                        onClick={handleDelete}
+                        >Delete</button>
+                    </div>
+                </div>
+            </div>
         </li>
     );
 };

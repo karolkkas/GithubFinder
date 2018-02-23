@@ -1,0 +1,23 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+label.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}

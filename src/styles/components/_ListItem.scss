@@ -1,0 +1,26 @@
+.list__item {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-img {
+    width: 100%;
+    height: auto;
+}
+
+.btns {
+    display: flex;
+
+    & > *:last-child {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .c-img {
+        width: 50%;
+    }
+}
+

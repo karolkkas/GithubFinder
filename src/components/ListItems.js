@@ -13,7 +13,7 @@ class ListItems extends Component {
         ));
         return (
             <div>
-                <ol>
+                <ol className="px-0">
                     {createProfiles}
                 </ol>
             </div>
