@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 const ListItem = ({ title, handleDeleteFromList, profile }) => {
     const handleDelete = (e) => {
-        const itemName = e.currentTarget;
-        handleDeleteFromList(itemName);
-        console.dir(itemName)
+        handleDeleteFromList(title);
     };
 
     return (
@@ -22,6 +20,7 @@ const ListItem = ({ title, handleDeleteFromList, profile }) => {
                         href={profile.html_url}
                         className="btn btn-warning"
                         title="Visit GitHub profile"
+                        target="_blank"
                         >GitHub</a>
                         <button
                         type="button"
